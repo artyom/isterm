@@ -10,5 +10,5 @@ func IsTerminal() bool {
 	if err != nil {
 		return false
 	}
-	return st.Mode()&os.ModeDevice == 0
+	return st.Mode()&os.ModeDevice != 0
 }
